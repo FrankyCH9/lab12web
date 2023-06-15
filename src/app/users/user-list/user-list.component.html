@@ -1,0 +1,80 @@
+<div class="container mt-3">
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      background-color: #ffffff;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-3 {
+      margin-top: 30px;
+    }
+  </style>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let user of users">
+      <div class="card mb-3">
+        <img [src]="user.image" class="card-img-top" alt="Imagen de usuario">
+        <div class="card-body">
+          <h5 class="card-title">{{ user.name }}</h5>
+          <button (click)="viewUserDetails(user)" class="btn btn-primary">Ver detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-3">
+    <a href="/post-list" class="btn btn-primary">Ver publicaciones</a>
+  </div>
+</div>

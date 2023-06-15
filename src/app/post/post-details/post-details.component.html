@@ -1,0 +1,55 @@
+<div class="container">
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <h2>Post Details</h2>
+  <p>Post ID: {{ postId }}</p>
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+  <p>{{ info }}</p>
+  <a href="/post-list">Volver</a>
+  <!-- Otros detalles de la publicación -->
+</div>
